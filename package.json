@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html",
+    "lint": "eslint \"src/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
@@ -12,10 +13,19 @@
   "license": "ISC",
   "homepage": "https://github.com/ricardani/my-own-react#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.13",
     "@babel/plugin-transform-flow-strip-types": "^7.12.10",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
-    "parcel": "^2.0.0-beta.1"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "parcel": "^1.12.4"
   }
 }
