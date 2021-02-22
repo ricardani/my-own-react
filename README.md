@@ -7,3 +7,11 @@ This project has the purpose of trying to build React from scratch to better und
 
 - React.createElement
 - ReactDom.render
+
+## V2
+
+- React.useState
+
+## V3
+
+- React.useReducer

@@ -1,23 +1,11 @@
 /* eslint-disable react/no-unknown-property */
-import React, { useState, useReducer } from './modules/react';
+import React, { useState } from './modules/react';
 import { render } from './modules/react-dom';
-
-const counterReducer = (state, action) => {
-    console.log(state)
-    switch (action.type) {
-        case 'INCREASE':
-            return { counter: state.counter + 1 }
-        case 'DECREASE':
-            return {counter: state.counter + 1}
-        default:
-            return state;
-    }
-}
 
 const App = () => {
     const [name, setName] = useState('World');
     const [counter, setCounter] = useState(0);
-    const [counterState, counterDispatch] = useReducer(counterReducer, { counter: 0 });
+    const [counter2, setCounter2] = useState(0);
     return (
         <div className="main-class">
             Hello {name}!
@@ -35,10 +23,10 @@ const App = () => {
 
             <div>
                 <h2>
-                    Counter 2: {counterState.counter}
+                    Counter 2: {counter2}
                 </h2>
-                <button onclick={() => counterDispatch({type: 'INCREASE'})}>+</button>
-                <button onclick={() => counterDispatch({type: 'DECREASE'})}>-</button>
+                <button onclick={() => setCounter2(counter2 + 1)}>+</button>
+                <button onclick={() => setCounter2(counter2 - 1)}>-</button>
             </div>
         </div>
     )
