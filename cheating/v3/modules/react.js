@@ -16,6 +16,9 @@ const createElement = (type, props, ...children) => {
 const STATES = [];
 let CURRENT_STATE_INDEX = 0;
 
+// const basicReducer = (state, action) => action;
+// export const useState = initialState => useReducer(basicReducer, initialState);
+
 export const useState = initialState => {
     const stateIndex = CURRENT_STATE_INDEX;
     STATES[stateIndex] = STATES[stateIndex] ?? initialState;
