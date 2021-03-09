@@ -37,12 +37,9 @@ export const useReducer = (reducer, initialState) => {
 
     const dispatch = action => {
         STATES[stateIndex] = reducer(STATES[stateIndex], action);
-        console.log(STATES[stateIndex]);
         CURRENT_STATE_INDEX = 0;
         rerender();
     };
-
-    console.log(STATES);
 
     CURRENT_STATE_INDEX++;
 

@@ -15,3 +15,7 @@ This project has the purpose of trying to build React from scratch to better und
 ## V3
 
 - React.useReducer
+
+## V4
+
+- React.useEffect
