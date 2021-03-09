@@ -17,19 +17,19 @@ const App = () => {
                 <h2>
                     Counter: {counter}
                 </h2>
-                <button onclick={() => setCounter(counter + 1)}>+</button>
-                <button onclick={() => setCounter(counter - 1)}>-</button>
+                <button type="button" onclick={() => setCounter(counter + 1)}>+</button>
+                <button type="button" onclick={() => setCounter(counter - 1)}>-</button>
             </div>
 
             <div>
                 <h2>
                     Counter 2: {counter2}
                 </h2>
-                <button onclick={() => setCounter2(counter2 + 1)}>+</button>
-                <button onclick={() => setCounter2(counter2 - 1)}>-</button>
+                <button type="button" onclick={() => setCounter2(counter2 + 1)}>+</button>
+                <button type="button" onclick={() => setCounter2(counter2 - 1)}>-</button>
             </div>
         </div>
-    )
+    );
 };
 
 render(App, document.querySelector('#root'));

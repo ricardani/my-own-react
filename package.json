@@ -4,7 +4,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "lint": "eslint \"src/**/*.{js,jsx}\""
+    "lint": "eslint \"{src,cheating}/**/*.{js,jsx}\""
   },
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@babel/core": "7.12.16",
     "@babel/preset-react": "7.12.13",
+    "babel-eslint": "10.1.0",
     "eslint": "7.18.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-loader": "4.0.2",

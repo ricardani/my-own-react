@@ -1,6 +1,6 @@
 import { rerender } from './react-dom';
 
-const createElement = (type, props, ...children) => {    
+const createElement = (type, props, ...children) => {
     if (typeof type === 'function') {
         return type(props);
     }
@@ -24,12 +24,12 @@ export const useState = initialState => {
         STATES[stateIndex] = newState;
         CURRENT_STATE_INDEX = 0;
         rerender();
-    }
+    };
 
     CURRENT_STATE_INDEX++;
 
     return [STATES[stateIndex], setFunction];
-}
+};
 
 export default {
     createElement

@@ -1,6 +1,6 @@
 import { rerender } from './react-dom';
 
-const createElement = (type, props, ...children) => {    
+const createElement = (type, props, ...children) => {
     if (typeof type === 'function') {
         return type(props);
     }
@@ -24,12 +24,12 @@ export const useState = initialState => {
         STATES[stateIndex] = newState;
         CURRENT_STATE_INDEX = 0;
         rerender();
-    }
+    };
 
     CURRENT_STATE_INDEX++;
 
     return [STATES[stateIndex], setFunction];
-}
+};
 
 export const useReducer = (reducer, initialState) => {
     const stateIndex = CURRENT_STATE_INDEX;
@@ -37,17 +37,17 @@ export const useReducer = (reducer, initialState) => {
 
     const dispatch = action => {
         STATES[stateIndex] = reducer(STATES[stateIndex], action);
-        console.log(STATES[stateIndex])
+        console.log(STATES[stateIndex]);
         CURRENT_STATE_INDEX = 0;
         rerender();
-    }
+    };
 
-    console.log(STATES)
+    console.log(STATES);
 
     CURRENT_STATE_INDEX++;
 
     return [STATES[stateIndex], dispatch];
-}
+};
 
 export default {
     createElement

@@ -62,6 +62,8 @@
         "function-paren-newline": "off",
         "jsx-a11y/no-static-element-interactions": "off",
         "jsx-a11y/click-events-have-key-events": "off",
-        "jest/no-test-prefixes": "off"
+        "jest/no-test-prefixes": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "no-plusplus": "off"
     }
 }

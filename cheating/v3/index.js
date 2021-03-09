@@ -3,16 +3,15 @@ import React, { useState, useReducer } from './modules/react';
 import { render } from './modules/react-dom';
 
 const counterReducer = (state, action) => {
-    console.log(state)
     switch (action.type) {
         case 'INCREASE':
-            return { counter: state.counter + 1 }
+            return { counter: state.counter + 1 };
         case 'DECREASE':
-            return {counter: state.counter + 1}
+            return { counter: state.counter + 1 };
         default:
             return state;
     }
-}
+};
 
 const App = () => {
     const [name, setName] = useState('World');
@@ -29,19 +28,19 @@ const App = () => {
                 <h2>
                     Counter: {counter}
                 </h2>
-                <button onclick={() => setCounter(counter + 1)}>+</button>
-                <button onclick={() => setCounter(counter - 1)}>-</button>
+                <button type="button" onclick={() => setCounter(counter + 1)}>+</button>
+                <button type="button" onclick={() => setCounter(counter - 1)}>-</button>
             </div>
 
             <div>
                 <h2>
                     Counter 2: {counterState.counter}
                 </h2>
-                <button onclick={() => counterDispatch({type: 'INCREASE'})}>+</button>
-                <button onclick={() => counterDispatch({type: 'DECREASE'})}>-</button>
+                <button type="button" onclick={() => counterDispatch({ type: 'INCREASE' })}>+</button>
+                <button type="button" onclick={() => counterDispatch({ type: 'DECREASE' })}>-</button>
             </div>
         </div>
-    )
+    );
 };
 
 render(App, document.querySelector('#root'));

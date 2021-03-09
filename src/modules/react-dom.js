@@ -1,12 +1,6 @@
 let ROOT_ELEMENT;
 let ROOT_CONTAINER;
 
-export const render = (reactElement, container) => {
-    ROOT_ELEMENT = ROOT_ELEMENT ?? reactElement;
-    ROOT_CONTAINER = ROOT_CONTAINER ?? container;
-    renderElements(ROOT_ELEMENT(), ROOT_CONTAINER);
-};
-
 const renderElements = (reactElement, container) => {
     if (typeof reactElement !== 'object') {
         const textNode = document.createTextNode(reactElement);
@@ -29,9 +23,15 @@ const renderElements = (reactElement, container) => {
     }
 
     container.appendChild(domElement);
-}
+};
+
+export const render = (reactElement, container) => {
+    ROOT_ELEMENT = ROOT_ELEMENT ?? reactElement;
+    ROOT_CONTAINER = ROOT_CONTAINER ?? container;
+    renderElements(ROOT_ELEMENT(), ROOT_CONTAINER);
+};
 
 export const rerender = () => {
     ROOT_CONTAINER.firstChild.remove();
     renderElements(ROOT_ELEMENT(), ROOT_CONTAINER);
-}
+};
